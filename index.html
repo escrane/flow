@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Water Flow Animation</title>
+  <script type="text/javascript">
+    let frame = 0;
+    function updateImage() {
+      document.getElementById("frame").src = `frames/frame_${frame}.png`;
+      frame = (frame + 1) % 100; // Loop back after 100 frames
+    }
+    setInterval(updateImage, 100);  // Update every 100 ms
+  </script>
+</head>
+<body>
+  <img id="frame" src="frames/frame_0.png" alt="Water Flow">
+</body>
+</html>
